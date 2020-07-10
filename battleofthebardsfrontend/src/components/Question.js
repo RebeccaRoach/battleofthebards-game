@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import PoemData from '../data/poems.json';
+import React, { useState, useContext } from 'react';
+import {GameContext} from '../App';
 
 const Question = () => {
 
+  const game = useContext(GameContext);
   const [guess, setGuess] = useState("");
 
   const handleChange = (e) => {
@@ -25,27 +26,25 @@ const Question = () => {
 
   return (
     <div className="question-container">
-      {PoemData.map((poem) => {
-        return <div>
-          <p>{poem.questions.map((q) => {
-            return (
-              <div>
-                <p>{q.text}</p>
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="text"
-                    placeholder="Your answer"
-                    name="userAnswer"
-                    onChange={handleChange}
-                    value={guess}
-                  />
-                  <input value="submit" type="submit" className="btn-dark"/>
-                </form>
-              </div>
-            )
-          })}</p>
-        </div>
-      })}
+      <div>
+        <p>{game.currentPoem.questions.map((q) => {
+          return (
+            <div>
+              <p>{q.text}</p>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Your answer"
+                  name="userAnswer"
+                  onChange={handleChange}
+                  value={guess}
+                />
+                <input value="submit" type="submit" className="btn-dark"/>
+              </form>
+            </div>
+          )
+        })}</p>
+      </div>
     </div>
   );
 }

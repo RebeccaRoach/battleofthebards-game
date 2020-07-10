@@ -10,7 +10,7 @@ const PoemFrame = (poem) => {
   return (
     <div className="App">
       <Poem />
-      {/* <Question /> */}
+      <Question />
       {/* <Clue /> */}
     </div>
   );
