@@ -1,24 +1,44 @@
-import React from 'react';
-import PoemFrame from "./components/PoemFrame"
+import React, { useState } from 'react';
+import PoemFrame from "./components/PoemFrame";
+import PoemData from './data/poems.json';
 import './App.css';
 
-// helper function for Json.parse(json) to get array of shuffled poem objs
-// from raw json, make the poem list of objects here
-// use context with two arrays, one for unread poems, one for read poems
+// TODO: helper function to track num guesses per question
 
-// helper function to track num guesses per question
+// TODO: helper function to check if guess is correct, adds score
 
-// helper function to check if guess is correct
-// and adds score
+export const GameContext = React.createContext();
 
 const App = () => {
+
+  // TODO: take in desired number of poems as param???
+  const shufflePoems = () => {
+    let poemsArray = PoemData;
+
+    // Shuffle thanks to: https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
+    for (let i = poemsArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = poemsArray[i]
+      poemsArray[i] = poemsArray[j]
+      poemsArray[j] = temp
+    }
+    
+    return poemsArray;
+  }
+
+   // initialize state with read poems, unread poems, and current poem
+   const [readPoems, setReadPoems] = useState([]);
+   const [unreadPoems, setUnreadPoems] = useState(shufflePoems);
+   const [currentPoem, setCurrentPoem] = useState(unreadPoems[0]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Display a poem here:
-        </p>
+        <h2>Battle of the Bards</h2>
+        {/* <button onClick={shufflePoems}>GET POEMS</button> */}
       </header>
+      <p>CURRENT POEM:</p>
+      <div>{currentPoem.title}</div>
       <PoemFrame />
       {/* FOOTER */}
       <div class="mt-5 pt-5 pb-5 footer">
