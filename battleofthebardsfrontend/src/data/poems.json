@@ -7,10 +7,18 @@
     "questions": [{
       "text": "Who is the author of this poem?",
       "answer": "Dylan Thomas",
-      "clue1": "This poet wrote 'Do Not Go Gentle Into That Good Night' while under contract for the BBC, shortly after WWII. By far one of his most popular works, the poem can be seen as a reflection of the spirit of the people of London after the German air raids.",
-      "clue2": "The poem was originally written while in Florence with his family. This poet is not Italian, however - he's Welsh!",
-      "clue3": "His first and last initials can be found as the first and last letters, respectively, of this work. Neat!",
-      "score": 50
+      "score": 50,
+      "clues": [
+        {
+          "text": "This poet wrote 'Do Not Go Gentle Into That Good Night' while under contract for the BBC, shortly after WWII. By far one of his most popular works, the poem can be seen as a reflection of the spirit of the people of London after the German air raids."
+        },
+        {
+          "text": "The poem was originally written while in Florence with his family. This poet is not Italian, however - he's Welsh!"
+        },
+        {
+          "text": "His first and last initials can be found as the first and last letters, respectively, of this work. Neat!"
+        }
+      ]
     }]
   }, 
   {
@@ -21,10 +29,18 @@
     "questions": [{
       "text": "Besides 'Eldorado', what is the most important word in this poem that takes on different meanings each time it is used?",
       "answer": "Shadow",
-      "clue1": "It plays a central role in every stanza.",
-      "clue2": "It can imply gloom or despair, a ghost, or the absence of sun.",
-      "clue3": "The final repetition references Psalm 23:4 and possibly suggests that Eldorado (or riches in general) does not exist in the living world, or may be extremely difficult to find in the physical realm.",
-      "score": 30
+      "score": 30,
+      "clues": [
+        {
+          "text": "It plays a central role in every stanza.",
+        },
+        {
+          "text": "It can imply gloom or despair, a ghost, or the absence of sun.",
+        },
+        {
+          "text": "The final repetition references Psalm 23:4 and possibly suggests that Eldorado (or riches in general) does not exist in the living world, or may be extremely difficult to find in the physical realm.",
+        }
+      ]
     }]
   },
   {
@@ -35,10 +51,18 @@
     "questions": [{
       "text": "What is the missing word in this poem?",
       "answer": "foe",
-      "clue1": "Expressing themes of indignation and revenge, this poem's original title was 'Christian Forbearance' and may speak to attitudes on anger which were held in Britian at the start of the French Revolution.",
-      "clue2": "This poem was published in 1794 as part of Blake's 'Songs of Experience' collection. The collection was a follow-up to his 1789 'Songs of Innocence.' The two books were later published together under the merged title 'Songs of Innocence and Experience, showing the Two Contrary States of the Human Soul.' It seems Blake enjoys juxtaposing opposites...",
-      "clue3": "This three-letter word rhymes with 'row' (indeed, you might be more likely to have a noisy argument with someone who's your enemy).",
-      "score": 30
+      "score": 30,
+      "clues": [
+        {
+          "text": "Expressing themes of indignation and revenge, this poem's original title was 'Christian Forbearance' and may speak to attitudes on anger which were held in Britian at the start of the French Revolution."
+        },
+        {
+          "text": "This poem was published in 1794 as part of Blake's 'Songs of Experience' collection. The collection was a follow-up to his 1789 'Songs of Innocence.' The two books were later published together under the merged title 'Songs of Innocence and Experience, showing the Two Contrary States of the Human Soul.' It seems Blake enjoys juxtaposing opposites..."
+        },
+        {
+          "text": "This three-letter word rhymes with 'row' (indeed, you might be more likely to have a noisy argument with someone who's your enemy)."
+        }
+      ]
     }]
   },
   {
@@ -49,10 +73,18 @@
     "questions": [{
       "text": "Who is the author of this poem?",
       "answer": "Frost",
-      "clue1": "Though a narrative poem, 'The Road Not Taken' is often misinterpreted as autobiographical. However, according to the poet's biographer, the work is more likely based on his friend, the writer Edward Thomas, who he met while spending 1912-1915 in England. After the author returned to New Hampshire in 1915, he sent his friend an advance copy of 'The Road Not Taken'. Thomas took the poem seriously and personally, and it may have been significant in Thomas' decision to enlist in World War I. (Thomas was killed two years later in the Battle of Arras.) In the poet's words, Thomas was 'a person who, whichever road he went, would be sorry he didn't go the other. He was hard on himself that way.'",
-      "clue2": "He is regarded as one of the most popular 20th century poets. A champion of naturalism and the arts, his poetry is accessible for all ages, yet contains a deeper layer that questions mortality and the human condition.",
-      "clue3": "Another famous poem of his is 'Stopping by Woods on a Snowy Evening'. With snow comes another form of ice - for which his last name is a synonym.",
-      "score": 20
+      "score": 20,
+      "clues": [
+        {
+          "text": "Though a narrative poem, 'The Road Not Taken' is often misinterpreted as autobiographical. However, according to the poet's biographer, the work is more likely based on his friend, the writer Edward Thomas, who he met while spending 1912-1915 in England. After the author returned to New Hampshire in 1915, he sent his friend an advance copy of 'The Road Not Taken'. Thomas took the poem seriously and personally, and it may have been significant in Thomas' decision to enlist in World War I. (Thomas was killed two years later in the Battle of Arras.) In the poet's words, Thomas was 'a person who, whichever road he went, would be sorry he didn't go the other. He was hard on himself that way.'",
+        },
+        {
+          "text": "He is regarded as one of the most popular 20th century poets. A champion of naturalism and the arts, his poetry is accessible for all ages, yet contains a deeper layer that questions mortality and the human condition."
+        },
+        {
+          "text": "Another famous poem of his is 'Stopping by Woods on a Snowy Evening'. With snow comes another form of ice - for which his last name is a synonym."
+        }
+      ]
     }]
   },
   {
@@ -63,10 +95,18 @@
     "questions": [{
       "text": "What single word is the title of this poem?",
       "answer": "Mirror",
-      "clue1": "Sylvia Plath is regarded as a pioneer in the genre of Confessional poetry, a term used to define poems which focus on the individual. This poem can be regarded as a retrospective investigation of the self through 'unmisted' eyes. The title also doubles as the dominant metaphor throughout.",
-      "clue2": "The timelessness inherent in this thing is evoked in line 5. Like a god, it is omniscient: able to see and reflect the truth, no matter what the truth looks like as time passes.",
-      "clue3": "A household object as common as a daily routine, this thing explores the life of a woman as an object reflected within it.",
-      "score": 30
+      "score": 30,
+      "clues": [
+        {
+          "text": "Sylvia Plath is regarded as a pioneer in the genre of Confessional poetry, a term used to define poems which focus on the individual. This poem can be regarded as a retrospective investigation of the self through 'unmisted' eyes. The title also doubles as the dominant metaphor throughout."
+        },
+        {
+          "text": "The timelessness inherent in this thing is evoked in line 5. Like a god, it is omniscient: able to see and reflect the truth, no matter what the truth looks like as time passes."
+        },
+        {
+          "text": "A household object as common as a daily routine, this thing explores the life of a woman as an object reflected within it."
+        }
+      ]
     }]
   },
   {
@@ -77,10 +117,18 @@
     "questions": [{
       "text": "What does 'Possibility' in this poem most likely refer to?",
       "answer": "Poetry",
-      "clue1": "It also begins with a 'p'",
-      "clue2": "In line 2, it is contrasted with prose, i.e. 'ordinary speech or writing, without metrical structure.'",
-      "clue3": "This poem belongs to the long tradition of ars poetica - literally meaning 'the art of poetry.' For centuries, poets have been writing about the power and beauty of poetry as a vocation and art form.",
-      "score": 30
+      "score": 30,
+      "clues": [
+        {
+          "text": "It also begins with a 'p'."
+        },
+        {
+          "text": "In line 2, it is contrasted with prose, i.e. 'ordinary speech or writing, without metrical structure.'"
+        },
+        {
+          "text": "This poem belongs to the long tradition of ars poetica - literally meaning 'the art of poetry.' For centuries, poets have been writing about the power and beauty of poetry as a vocation and art form."
+        }
+      ]
     }]
   },
   {
@@ -91,10 +139,18 @@
     "questions": [{
       "text": "Who is the author of this poem?",
       "answer": "Emily Dickinson",
-      "clue1": "Much of this author's poetry is characterized by her own inner strugggles. Though she lived mostly in seclusion, her poetry ofen reveals a fully realized, intricate inner life.",
-      "clue2": "When reading the poem aloud, this poet's use of dashes is said to create a kind of 'visible breath' for the poem to be read aloud in a staccato'd rhythm. This characteristic punctuation is among the most 'widely contested' punctuations in contemporary literary discussions.",
-      "clue3": "This poet's widespread capitalization of common nouns perhaps contributes to a riddle-like quality in many of her poems.",
-      "score": 30
+      "score": 30,
+      "clues": [
+        {
+          "text": "Much of this author's poetry is characterized by her own inner strugggles. Though she lived mostly in seclusion, her poetry ofen reveals a fully realized, intricate inner life."
+        },
+        {
+          "text": "When reading the poem aloud, this poet's use of dashes is said to create a kind of 'visible breath' for the poem to be read aloud in a staccato'd rhythm. This characteristic punctuation is among the most 'widely contested' punctuations in contemporary literary discussions."
+        },
+        {
+          "text": "This poet's widespread capitalization of common nouns perhaps contributes to a riddle-like quality in many of her poems."
+        }
+      ]
     }]
   },
   {
@@ -105,10 +161,18 @@
     "questions": [{
       "text": "What famous statue does the poem depict?",
       "answer": "The Statue of Liberty",
-      "clue1": "Emma Lazarus was commissioned to write a sonnet to help raise funds for a pedestal for this statue. She initially rejected the offer but eventually agreed when pursuaded that the statue would be of great significance to immigrants sailing into the harbor of Ellis Island.",
-      "clue2": "The 'imprisoned lightning' refers to the electric light in the torch of this statue, then a novelty.",
-      "clue3": "The title of the poem and the first two lines reference the Greek Colossus of Rhodes, one of the Seven Wonders of the Ancient World, a famously gigantic sculpture that stood beside or straddled across the entrance to the harbor of the island of Rhodes in the 3rd century BC. In the poem, Lazarus contrasts that ancient symbol of grandeur and empire with a 'New' Colossus, a female embodiment commanding maternal strength.",
-      "score": 20
+      "score": 20,
+      "clues": [
+        {
+          "text": "Emma Lazarus was commissioned to write a sonnet to help raise funds for a pedestal for this statue. She initially rejected the offer but eventually agreed when pursuaded that the statue would be of great significance to immigrants sailing into the harbor of Ellis Island."
+        },
+        {
+          "text": "The 'imprisoned lightning' refers to the electric light in the torch of this statue, then a novelty."
+        },
+        {
+          "text": "The title of the poem and the first two lines reference the Greek Colossus of Rhodes, one of the Seven Wonders of the Ancient World, a famously gigantic sculpture that stood beside or straddled across the entrance to the harbor of the island of Rhodes in the 3rd century BC. In the poem, Lazarus contrasts that ancient symbol of grandeur and empire with a 'New' Colossus, a female embodiment commanding maternal strength."
+        }
+      ]
     }]
   },
   {
@@ -119,10 +183,18 @@
     "questions": [{
       "text": "What is the title of this poem?",
       "answer": "Section 9, Song of Myself",
-      "clue1": "The poem was first published without sections as the first of twelve untitled poems in the first (1855) edition of 'Leaves of Grass'. The first edition was published by Walt Whitman at his own expense.",
-      "clue2": "In the second (1856) edition, Whitman used the title 'Poem of Walt Whitman, an American,' which was shortened to 'Walt Whitman' for the third (1860) edition.\n\n The poem was divided into fifty-two numbered sections for the fourth (1867) edition and took on the final title in the last edition (1891–2). Funny that today in the age of 'selfies', Whitman's poem might fit right in...",
-      "clue3": "The number of sections is generally thought to mirror the number of weeks in the year. If this interpretation is true, the section number of this portion of the poem would fall in the first week of March.",
-      "score": 40
+      "score": 40,
+      "clues": [
+        {
+          "text": "The poem was first published without sections as the first of twelve untitled poems in the first (1855) edition of 'Leaves of Grass'. The first edition was published by Walt Whitman at his own expense."
+        },
+        {
+          "text": "In the second (1856) edition, Whitman used the title 'Poem of Walt Whitman, an American,' which was shortened to 'Walt Whitman' for the third (1860) edition.\n\n The poem was divided into fifty-two numbered sections for the fourth (1867) edition and took on the final title in the last edition (1891–2). Funny that today in the age of 'selfies', Whitman's poem might fit right in..."
+        },
+        {
+          "text": "The number of sections is generally thought to mirror the number of weeks in the year. If this interpretation is true, the section number of this portion of the poem would fall in the first week of March."
+        }
+      ]
     }]
   },
   {
@@ -133,10 +205,18 @@
     "questions": [{
       "text": "What historical figure is the subject of this poem?",
       "answer": "Abraham Lincoln",
-      "clue1": "The poem was first published in the pamphlet 'Sequel to Drum-Taps' which assembled 18 poems regarding the American Civil War (the central event during Walt Whitman's life). The pamphlet included another elegy about this person, entitled 'When Lilacs Last in the Dooryard Bloom'd'.",
-      "clue2": "'O Captain! My Captain!' became one of Whitman's most famous poems, one that he would read at the end of his famous lecture about this person's assassination. Whitman became so identified with the poem that late in life he remarked, 'Damn My Captain...I'm almost sorry I ever wrote the poem.'",
-      "clue3": "This person occupied the US presidency corresponding to the number found by multiplying the number of lines in each stanza by 2.",
-      "score": 30
+      "score": 30,
+      "clues": [
+        {
+          "text": "The poem was first published in the pamphlet 'Sequel to Drum-Taps' which assembled 18 poems regarding the American Civil War (the central event during Walt Whitman's life). The pamphlet included another elegy about this person, entitled 'When Lilacs Last in the Dooryard Bloom'd'."
+        },
+        {
+          "text": "'O Captain! My Captain!' became one of Whitman's most famous poems, one that he would read at the end of his famous lecture about this person's assassination. Whitman became so identified with the poem that late in life he remarked, 'Damn My Captain...I'm almost sorry I ever wrote the poem.'"
+        },
+        {
+          "text": "This person occupied the US presidency corresponding to the number found by multiplying the number of lines in each stanza by 2."
+        }
+      ]
     }]
   },
   {
@@ -147,10 +227,18 @@
     "questions": [{
       "text": "What's the title of this poem?",
       "answer": "One Art",
-      "clue1": "Bishop wrote seventeen drafts of this poem, with titles including 'How to Lose Things,' 'The Gift of Losing Things,' and 'The Art of Losing Things'. By the fifteenth draft, Bishop had settled on the final title.",
-      "clue2": "This poem is considered to be one of the best villanelles in the English Language, and uses an 'ABA' rhyme scheme in each 3-line tercet. The title contains the number representing the difference in syllable count in the poem's alternating lines.",
-      "clue3": "The title contains a word that means something that one gets better at with 'practice'. It can be found within many lines from the 'A' rhyme of this villanelle.",
-      "score": 50
+      "score": 50,
+      "clues": [
+        {
+          "text": "Bishop wrote seventeen drafts of this poem, with titles including 'How to Lose Things,' 'The Gift of Losing Things,' and 'The Art of Losing Things'. By the fifteenth draft, Bishop had settled on the final title."
+        },
+        {
+          "text": "This poem is considered to be one of the best villanelles in the English Language, and uses an 'ABA' rhyme scheme in each 3-line tercet. The title contains the number representing the difference in syllable count in the poem's alternating lines."
+        },
+        {
+          "text": "The title contains a word that means something that one gets better at with 'practice'. It can be found within many lines from the 'A' rhyme of this villanelle."
+        }
+      ]
     }]
   },
   {
@@ -161,10 +249,18 @@
     "questions": [{
       "text": "Maya Angelou was one of the most famous African American writers of the modern era. With which famous figure was she planning to collaborate on the Poor People's March on Washington - an effort to gain economic justice for poor people in the US?",
       "answer": "Martin Luther King, Jr.",
-      "clue1": "Throughout this poem, the types of harrowing and unjust treatment that Black people in America experience are addressed alongside declarations of 'I rise.'",
-      "clue2": "Angelou drew upon blues, gospel and spiritual songs as inspiration for the balladic patterns of this poem. She uses a 'call-and-response' technique that reflects rich African American oral traditions. As such, the power of the poem becomes even more evident when recited aloud - much like the work of her would-be collaborator.",
-      "clue3": "This person's most-famous speech includes the following passage: 'We must forever conduct our struggle on the high plane of dignity and discipline. We must not allow our creative protest to degenerate into physical violence. Again and again, we must rise to the majestic heights of meeting physical force with soul force.' It appears their messages resonate, indeed, that they share the same 'dream' (line 40) for peace, justice, and freedom of opportunity for all.",
-      "score": 30
+      "score": 30,
+      "clues": [
+        {
+          "text": "Throughout this poem, the types of harrowing and unjust treatment that Black people in America experience are addressed alongside declarations of 'I rise.'"
+        },
+        {
+          "text": "Angelou drew upon blues, gospel and spiritual songs as inspiration for the balladic patterns of this poem. She uses a 'call-and-response' technique that reflects rich African American oral traditions. As such, the power of the poem becomes even more evident when recited aloud - much like the work of her would-be collaborator."
+        },
+        {
+          "text": "This person's most-famous speech includes the following passage: 'We must forever conduct our struggle on the high plane of dignity and discipline. We must not allow our creative protest to degenerate into physical violence. Again and again, we must rise to the majestic heights of meeting physical force with soul force.' It appears their messages resonate, indeed, that they share the same 'dream' (line 40) for peace, justice, and freedom of opportunity for all."
+        }
+      ] 
     }]
   },
   {
@@ -175,10 +271,18 @@
     "questions": [{
       "text": "What one word did Brooks use to suggest that the pool-playing protagonists in this poem are questioning the validity of their existence?",
       "answer": "we",
-      "clue1": "Brooks has said that this word is meant to be said softly when read aloud.",
-      "clue2": "Brooks' inspiration for the poem came from walking past a pool hall full of boys, which led her to ask herself why they weren't in school --and more broadly, “I wonder how they feel about themselves?” With the first two lines as a subtitle for this poem, she thus created the setting and characters, the seven pool players at the Golden Shovel. This word introduces their boasts, which have also been said to reference the 7 Deadly Sins.",
-      "clue3": "Enjambment in poetry is the running on of a sense from line to the next without punctuation, a major pause or syntactical break. This word drives the poem's enjambment throughout, heightening the sense of surprise in the final couplet when 'We / Die soon.' suggests a moment of self-awareness about the choices that the players have made.",
-      "score": 40
+      "score": 40,
+      "clues": [
+        {
+          "text": "Brooks has said that this word is meant to be said softly when read aloud."
+        },
+        {
+          "text": "Brooks' inspiration for the poem came from walking past a pool hall full of boys, which led her to ask herself why they weren't in school --and more broadly, “I wonder how they feel about themselves?” With the first two lines as a subtitle for this poem, she thus created the setting and characters, the seven pool players at the Golden Shovel. This word introduces their boasts, which have also been said to reference the 7 Deadly Sins."
+        },
+        {
+          "text": "Enjambment in poetry is the running on of a sense from line to the next without punctuation, a major pause or syntactical break. This word drives the poem's enjambment throughout, heightening the sense of surprise in the final couplet when 'We / Die soon.' suggests a moment of self-awareness about the choices that the players have made."
+        }
+      ]
     }]
   }
 ]
