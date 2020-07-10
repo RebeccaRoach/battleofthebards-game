@@ -11,7 +11,7 @@ const Clue = () => {
       <div>
         <p>{game.currentPoem.questions.map((q) => {
           return (
-            <div class="col-sm-6">
+            <div>
               <div class="card">
                 <div class="card-body">
                   <p class="card-text">{q.clues.map((clue) => {

@@ -8,11 +8,18 @@ import Clue from './Clue'
 
 const PoemFrame = (poem) => {
   return (
-    <div className="App">
-      <Poem />
-      <Question />
-      <h4>Clue Section:</h4>
-      <Clue />
+    <div className="poem-frame-container">
+      <div className="row">
+        <div className="column">
+          <Poem />
+        </div>
+        <div className="column">
+          <Question />
+          <button className="pizazz-btn">Question</button>
+          <h4>Clue Section:</h4>
+          <Clue />
+        </div>
+      </div>
     </div>
   );
 }
