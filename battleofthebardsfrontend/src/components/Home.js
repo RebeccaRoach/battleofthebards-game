@@ -1,13 +1,15 @@
 import React from 'react';
 import Poem from './Poem'
 import Question from './Question'
+import Clue from './Clue'
 // import './App.css';
 
 const Home = () => {
   return (
     <div className="App">
-      <Poem />
-      <Question />
+      {/* <Poem /> */}
+      {/* <Question /> */}
+      <Clue />
       {/* FOOTER */}
       <div class="mt-5 pt-5 pb-5 footer">
         <div class="container">
