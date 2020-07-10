@@ -32,26 +32,35 @@ const App = () => {
    const [currentPoem, setCurrentPoem] = useState(unreadPoems[0]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Battle of the Bards</h2>
-        {/* <button onClick={shufflePoems}>GET POEMS</button> */}
-      </header>
-      <p>CURRENT POEM:</p>
-      <div>{currentPoem.title}</div>
-      <PoemFrame />
-      {/* FOOTER */}
-      <div class="mt-5 pt-5 pb-5 footer">
-        <div class="container">
-          <div class="row mt-5">
-            <div class="col copyright">
-              <p>Made by Becca</p>
-              <p><small>© 2020. All Rights Reserved.</small></p>
+    <GameContext.Provider value={{
+      readPoems,
+      unreadPoems,
+      currentPoem,
+      setReadPoems,
+      setUnreadPoems,
+      setCurrentPoem
+    }}>
+      <div className="App">
+        <header className="App-header">
+          <h2>Battle of the Bards</h2>
+          {/* <button onClick={shufflePoems}>GET POEMS</button> */}
+        </header>
+        <p>CURRENT POEM:</p>
+        <div>{currentPoem.title}</div>
+        <PoemFrame />
+        {/* FOOTER */}
+        <div class="mt-5 pt-5 pb-5 footer">
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col copyright">
+                <p>Made by Becca</p>
+                <p><small>© 2020. All Rights Reserved.</small></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </GameContext.Provider>
   );
 }
 
