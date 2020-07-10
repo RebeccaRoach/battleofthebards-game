@@ -6,11 +6,11 @@ import Clue from './Clue'
 
 // loops into App state context to conditionally render stateful things in this component (not other children)
 
-const PoemFrame = () => {
+const PoemFrame = (poem) => {
   return (
     <div className="App">
-      {/* <Poem /> */}
-      <Question />
+      <Poem />
+      {/* <Question /> */}
       {/* <Clue /> */}
     </div>
   );

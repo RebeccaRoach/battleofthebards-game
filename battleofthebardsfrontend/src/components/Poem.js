@@ -1,22 +1,23 @@
-import React from 'react';
-import PoemData from '../data/poems.json'
+import React, { useContext } from 'react';
+import {GameContext} from '../App';
 
 const Poem = () => {
+
+  const game = useContext(GameContext);
+
   return (
     <div className="poem-card">
-      {PoemData.map((poem, index) => {
-        return <div className="card">
-          <div className="card-header">
-            <h4>{poem.title}</h4>
-            <p>by {poem.author}, {poem.year}</p>
-          </div>
-          <div className="card-body">
-            <div>
-              <pre><span className="card-text">{poem.text}</span></pre>
-            </div>
+      <div className="card">
+        <div className="card-header">
+          <h4>{game.currentPoem.title}</h4>
+          <p>by {game.currentPoem.author}, {game.currentPoem.year}</p>
+        </div>
+        <div className="card-body">
+          <div>
+            <pre><span className="card-text">{game.currentPoem.text}</span></pre>
           </div>
         </div>
-      })}
+      </div>
     </div>
   );
 }
