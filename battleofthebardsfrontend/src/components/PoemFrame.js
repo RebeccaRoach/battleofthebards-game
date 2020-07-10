@@ -11,7 +11,8 @@ const PoemFrame = (poem) => {
     <div className="App">
       <Poem />
       <Question />
-      {/* <Clue /> */}
+      <h4>Clue Section:</h4>
+      <Clue />
     </div>
   );
 }

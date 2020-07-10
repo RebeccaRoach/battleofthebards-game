@@ -1,25 +1,30 @@
-import React, { useState } from 'react';
-import PoemData from '../data/poems.json';
+import React, { useState, useContext } from 'react';
+import {GameContext} from '../App';
 
 const Clue = () => {
+
+  const game = useContext(GameContext);
+
   return (
     // Carousel here??
     <div className="clue-container">
-      {PoemData.map((poem) => {
-        return <div>
-          <p>{poem.questions.map((q) => {
-            return (
-              <div class="col-sm-6">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">{q.clue1}</p>
-                  </div>
+      <div>
+        <p>{game.currentPoem.questions.map((q) => {
+          return (
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">{q.clues.map((clue) => {
+                    return (
+                      <p>{clue.text}</p>
+                    )
+                  })}</p>
                 </div>
               </div>
-            )
-          })}</p>
-        </div>
-      })}
+            </div>
+          )
+        })}</p>
+      </div>
     </div>
   );
 }
