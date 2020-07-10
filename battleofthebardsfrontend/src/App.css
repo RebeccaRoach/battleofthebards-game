@@ -10,7 +10,7 @@ body {
   text-align: left;
 }
 
-.poem-card {
+.poem-container {
   color: blue;
   /* max-width: 40%; */
   /* margin: 20px 80px; */
@@ -59,23 +59,29 @@ body {
   /* max-width: 30%; */
 }
 
+.inner-p-c {
+  background-color: #e1f5fe;
+  margin: 10px;
+}
 
 
-/* Pizazzy Question and Clue button styles */
-
+/* Pizazzy Question/ Clue button */
 .pizazz-btn {
   display: block;
-  /* margin: 0px auto;
-  margin-bottom: 20px; */
+  min-width: 90px;
+  margin: 0px auto;
   height: 40px;
   text-align: center;
   color: rgba(255,255,255,0.9);
   border-radius: 20px;
   background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
-  background-size: 250%;
+  background-size: 210%;
 }
 
 .pizazz-btn:hover {
-  box-shadow: 5px 5px #C0C0C0;
-  border: 0.5px solid black;
+  border: 2px solid black;
+}
+
+.advance-arrow, .back-arrow {
+  max-width: 50px;
 }
