@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import PoemFrame from "./components/PoemFrame";
 import PoemData from './data/poems.json';
+import ResultsPage from "./components/ResultsPage";
 import './App.css';
-
-// TODO: helper function to track num guesses per question
-
-// TODO: helper function to check if guess is correct, adds score
 
 export const GameContext = React.createContext();
 
 const App = () => {
 
-  // TODO: take in desired number of poems as param???
   const shufflePoems = () => {
     let poemsArray = PoemData;
 
@@ -22,32 +18,38 @@ const App = () => {
       poemsArray[i] = poemsArray[j]
       poemsArray[j] = temp
     }
-    
-    return poemsArray;
+
+    // 3 poems per game
+    const gamePoems = poemsArray.slice(0, 3)
+    return gamePoems;
   }
 
-   // initialize state with read poems, unread poems, and current poem
-   const [readPoems, setReadPoems] = useState([]);
+   // initialize unread poems, current poem, clue bank, and score
    const [unreadPoems, setUnreadPoems] = useState(shufflePoems);
    const [currentPoem, setCurrentPoem] = useState(unreadPoems[0]);
+   const [clueBank, setClueBank] = useState(6);
+   const [score, setScore] = useState(0);
 
   return (
     <GameContext.Provider value={{
-      readPoems,
       unreadPoems,
       currentPoem,
-      setReadPoems,
+      clueBank,
+      score,
       setUnreadPoems,
-      setCurrentPoem
+      setCurrentPoem,
+      setClueBank,
+      setScore
     }}>
       <div className="App">
         <header className="App-header">
           <h2>Battle of the Bards</h2>
-          {/* <button onClick={shufflePoems}>GET POEMS</button> */}
         </header>
-        <p>CURRENT POEM:</p>
-        <div>{currentPoem.title}</div>
-        <PoemFrame />
+        { currentPoem ? (
+          <div>
+            <PoemFrame />
+          </div>
+        ) : <ResultsPage score={score}/>}
         {/* FOOTER */}
         <div class="mt-5 pt-5 pb-5 footer">
           <div class="container">
