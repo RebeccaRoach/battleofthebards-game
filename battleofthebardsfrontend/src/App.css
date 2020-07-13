@@ -1,6 +1,6 @@
-* {
+/* * {
   font-family: 'Arimo', sans-serif;
-}
+} */
 
 body {
   margin: 0;
@@ -8,6 +8,56 @@ body {
 
 .App {
   text-align: left;
+}
+
+.start-page {
+  background-image: url("https://images.unsplash.com/photo-1575018101372-580b21aab4d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.5; */
+}
+
+.start-page::after {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1575018101372-580b21aab4d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: -1;   
+}
+
+.castle-not-showing {
+  background-color: pink;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@800&display=swap');
+.game-text {
+  font-family: 'Grenze Gotisch', cursive;
+  margin-left: 5%;
+  /* margin-bottom: 15%; */
+}
+
+.game-title {
+  font-size: 5.5em;
+}
+
+.game-description {
+  font-size: 2.5em;
+}
+
+.game-header {
+  margin-bottom: 7%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;400&display=swap');
+.directions {
+  font-family: 'Muli', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  background-color: rgba(211, 211, 211, 0.8);
+  margin-right: 52%;
+  padding: 30px;
 }
 
 .poem-container {
