@@ -12,14 +12,16 @@ const StartPage = ({startGame}) => {
         <div className="directions">
           <p>Good day to you, most clever guest!</p>
           <p>3 poems herein make your noble quest</p>
-          <p>With each comes secret questions, 3 clues ―</p>
+          <p>With each comes a challenge, 3 clues ―</p>
           <p>Trusty guides, but only 6 can be used.</p>
           <p>Points you receive for questions correct;</p>
           <p>Your honor and wit here you must protect!</p>
           <p>May the Bard with the highest score win.</p>
         </div>
       </div>
-      <button class="pizazz-btn" onClick={startGame}>Start Game</button>
+      <div className="start-button-div">
+        <button class="pizazz-btn" onClick={startGame}>Start Game</button>
+      </div>
     </div>
   );
 }

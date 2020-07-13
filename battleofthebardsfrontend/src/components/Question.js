@@ -36,8 +36,6 @@ const Question = ({ question, onSuccess }) => {
     setGuess("");
   }
 
-  // "Please enter something to make a valid guess."
-
   return (
     <div className="question-container">
       <Toast onClose={() => setShowToast(false)} show={showToast} delay={4000} autohide>
@@ -57,7 +55,7 @@ const Question = ({ question, onSuccess }) => {
               onChange={handleChange}
               value={guess}
             />
-            <input value="submit" type="submit" className="btn-dark" />
+            <input value="Submit" type="submit" className="submit-answer-btn" />
           </form>
         </div>
       </div>
