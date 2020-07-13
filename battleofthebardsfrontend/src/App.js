@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PoemFrame from "./components/PoemFrame";
 import PoemData from './data/poems.json';
+import StartPage from "./components/StartPage";
 import ResultsPage from "./components/ResultsPage";
 import './App.css';
 
@@ -24,11 +25,28 @@ const App = () => {
     return gamePoems;
   }
 
-   // initialize unread poems, current poem, clue bank, and score
-   const [unreadPoems, setUnreadPoems] = useState(shufflePoems);
-   const [currentPoem, setCurrentPoem] = useState(unreadPoems[0]);
-   const [clueBank, setClueBank] = useState(6);
-   const [score, setScore] = useState(0);
+  // initialize unread poems, current poem, clue bank, and score
+  const [unreadPoems, setUnreadPoems] = useState(shufflePoems);
+  const [currentPoem, setCurrentPoem] = useState(unreadPoems[0]);
+  const [clueBank, setClueBank] = useState(6);
+  const [score, setScore] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
+
+  const replay = () => {
+    setUnreadPoems(shufflePoems);
+    setCurrentPoem(unreadPoems[0]);
+    setClueBank(6);
+    setScore(0);
+  }
+
+  const startGame = () => {
+    setGameStarted(true);
+  }
+
+  const reset = () => {
+    alert("clicked reset");
+    setGameStarted(true);
+  }
 
   return (
     <GameContext.Provider value={{
@@ -42,14 +60,21 @@ const App = () => {
       setScore
     }}>
       <div className="App">
-        <header className="App-header">
-          <h2>Battle of the Bards</h2>
-        </header>
-        { currentPoem ? (
+      { gameStarted ? (
           <div>
-            <PoemFrame />
+            {/* RENDER OUT POEM FRAME OR RESULTS PAGE */}
+            { currentPoem ? (
+              <div>
+                <h6 className="game-title">Battle of the Bards</h6>
+                <PoemFrame />
+              </div>
+            ) : <ResultsPage score={score} replay={replay} />}
           </div>
-        ) : <ResultsPage score={score}/>}
+        ) : (
+          <div>
+            {/* SHOW PAGE TO START GAME */}
+            <StartPage startGame={startGame}/>
+          </div> )}
         {/* FOOTER */}
         <div class="mt-5 pt-5 pb-5 footer">
           <div class="container">
