@@ -37,16 +37,27 @@ const App = () => {
     setCurrentPoem(unreadPoems[0]);
     setClueBank(6);
     setScore(0);
+    setGameStarted(true);
+    console.log("GS");
+    console.log(gameStarted);
+    console.log("Score");
+    console.log(score);
+    console.log("clueBank");
+    console.log(clueBank);
+
   }
 
   const startGame = () => {
     setGameStarted(true);
   }
 
-  const reset = () => {
-    alert("clicked reset");
-    setGameStarted(true);
-  }
+  // const reset = () => {
+  //   setGameStarted(false);
+  //   setUnreadPoems(shufflePoems);
+  //   setCurrentPoem(unreadPoems[0]);
+  //   setClueBank(6);
+  //   setScore(0);
+  // }
 
   return (
     <GameContext.Provider value={{
@@ -65,7 +76,7 @@ const App = () => {
             {/* RENDER OUT POEM FRAME OR RESULTS PAGE */}
             { currentPoem ? (
               <div>
-                <h6 className="game-title">Battle of the Bards</h6>
+                <h6 className="game-title-fixed">Battle of the Bards</h6>
                 <PoemFrame />
               </div>
             ) : <ResultsPage score={score} replay={replay} />}
@@ -76,12 +87,12 @@ const App = () => {
             <StartPage startGame={startGame}/>
           </div> )}
         {/* FOOTER */}
-        <div class="mt-5 pt-5 pb-5 footer">
+        <div class="footer">
           <div class="container">
-            <div class="row mt-5">
+            <div class="centered row mt-4">
               <div class="col copyright">
-                <p>Made by Becca</p>
-                <p><small>© 2020. All Rights Reserved.</small></p>
+                <p>Game by Becca</p>
+                <p><small>© 2020. Made w/ 💜.</small></p>
               </div>
             </div>
           </div>

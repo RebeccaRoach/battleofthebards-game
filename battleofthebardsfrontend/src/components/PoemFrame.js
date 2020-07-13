@@ -44,10 +44,12 @@ const PoemFrame = () => {
         </div>
         <div className="column">
           {displayedPoemQuestion && <Question question={game.currentPoem.questions[0]} onSuccess={advanceNextPoem} />}
-          {!displayedPoemQuestion && <button onClick={getQuestion} className="pizazz-btn">Show Question</button>}
+          {!displayedPoemQuestion && <button onClick={getQuestion} id="question-btn" className="pizazz-btn">Show Question</button>}
           {displayedPoemQuestion && <button onClick={getClue} className="pizazz-btn">Show Clue</button>}
           <Clue displayClues={displayClues} />
-          <input onClick={advanceNextPoem} className="advance-arrow" type="image" src={customButtonImg} />
+          <div className="advance-arrow-div">
+            <input onClick={advanceNextPoem} className="advance-arrow" type="image" src={customButtonImg} />
+          </div>
         </div>
       </div>
     </div>
