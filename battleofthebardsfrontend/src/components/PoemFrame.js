@@ -32,7 +32,7 @@ const PoemFrame = () => {
     setDisplayedPoemQuestion(false);
     const sliced = game.unreadPoems.slice(1);
     game.setUnreadPoems(sliced);
-    game.setCurrentPoem(sliced[0]);
+    // game.setCurrentPoem(sliced[0]);
     setDisplayClues(0);
   }
 
@@ -43,7 +43,7 @@ const PoemFrame = () => {
           <Poem />
         </div>
         <div className="column">
-          {displayedPoemQuestion && <Question question={game.currentPoem.questions[0]} onSuccess={advanceNextPoem} />}
+          {displayedPoemQuestion && <Question question={game.unreadPoems[0].questions[0]} onSuccess={advanceNextPoem} />}
           {!displayedPoemQuestion && <button onClick={getQuestion} id="question-btn" className="pizazz-btn">Show Question</button>}
           {displayedPoemQuestion && <button onClick={getClue} className="pizazz-btn">Show Clue</button>}
           <Clue displayClues={displayClues} />

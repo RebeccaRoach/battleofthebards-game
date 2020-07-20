@@ -4,7 +4,7 @@ import { GameContext } from '../App';
 const Clue = ({ displayClues }) => {
 
   const game = useContext(GameContext);
-  const currentQuestion = game.currentPoem.questions[0];
+  const currentQuestion = game.unreadPoems[0].questions[0];
 
   return (
     <div className="clue-container">
