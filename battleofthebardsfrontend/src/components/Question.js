@@ -1,11 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { GameContext } from '../App';
-import Toast from 'react-bootstrap/Toast';
 
-const Question = ({ question, onSuccess }) => {
+const Question = ({ question, handleQuestionAnswered, onSuccess }) => {
 
-  const [showToast, setShowToast] = useState(false);
-  const [correctText, setCorrectText] = useState(false);
   const [guess, setGuess] = useState("");
   const game = useContext(GameContext);
 
@@ -14,13 +11,11 @@ const Question = ({ question, onSuccess }) => {
     const answered_correct_results = question.answers.filter(entry => entry.toLowerCase() === user_answer);
 
     if (answered_correct_results.length > 0) {
-      setShowToast(true);
-      setCorrectText(true);
+      handleQuestionAnswered(true);
       game.setScore(game.score + question.score);
       setTimeout(() => { onSuccess(); }, 3000);
     } else {
-      setShowToast(true);
-      setCorrectText(false);
+      handleQuestionAnswered(false);
     }
   }
 
@@ -38,12 +33,6 @@ const Question = ({ question, onSuccess }) => {
 
   return (
     <div className="question-container">
-      <Toast onClose={() => setShowToast(false)} show={showToast} delay={4000} autohide>
-        <Toast.Header>
-          <strong className="mr-auto">{correctText ? "Huzzah!" : "Try, try again!"}</strong>
-        </Toast.Header>
-        <Toast.Body>{correctText ? `You just bested this ${question.score}-point question. 🏆` : `This question is worth ${question.score} points. You have ${game.clueBank} clues left.`}</Toast.Body>
-      </Toast>
       <div>
         <div>
           <p>{question.text}</p>
