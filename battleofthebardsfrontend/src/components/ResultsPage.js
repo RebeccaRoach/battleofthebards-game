@@ -14,7 +14,6 @@ const ResultsPage = ({score, replay}) => {
           />
         </div>
         <button class="pizazz-btn" onClick={replay}>Play Again</button>
-        {/* <button class="pizazz-btn" onClick={reset}>Return home</button> */}
       </div>
     </div>
   );
