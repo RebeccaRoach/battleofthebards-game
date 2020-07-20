@@ -1,6 +1,11 @@
 import React from 'react';
 
-const StartPage = ({startGame}) => {
+const StartPage = ({startGame, buttonDisabled}) => {
+
+  const disabledAttribute = () => {
+    const disabled = "disabled";
+    return buttonDisabled ? { disabled } : {}
+  }
 
   return (
     <div className="start-page">
@@ -20,7 +25,7 @@ const StartPage = ({startGame}) => {
         </div>
       </div>
       <div className="start-button-div">
-        <button class="pizazz-btn" onClick={startGame}>Start Game</button>
+        <button class="pizazz-btn" {...disabledAttribute()} onClick={startGame}>Start Game</button>
       </div>
     </div>
   );

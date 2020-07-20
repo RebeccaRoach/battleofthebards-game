@@ -1,39 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PoemFrame from "./components/PoemFrame";
-import PoemData from './data/poems.json';
 import StartPage from "./components/StartPage";
 import ResultsPage from "./components/ResultsPage";
 import './App.css';
+import axios from 'axios';
 
 export const GameContext = React.createContext();
 
 const App = () => {
 
-  const shufflePoems = () => {
-    let poemsArray = PoemData;
+  const [poemsData, setPoemsData] = useState([]);
+
+  useEffect(() => {
+    // const API_BASE_URL = "http://localhost:8000/game/poems";
+    // had to add / at the end to get around redirect (defaultRouter in Django REST adds trailing_slash)
+    axios.get('http://localhost:8000/game/poems/')
+      .then((response) => {
+        setPoemsData(response.data);
+        const result = loadGamePoems(response.data);
+        setUnreadPoems(result);
+        setCurrentPoem(result[0]);
+      })
+      .catch(() => {
+        alert("Failed to fetch the poems");
+      })
+  }, [setPoemsData])
+
+
+  const loadGamePoems = (poemsData) => {
 
     // Shuffle thanks to: https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
-    for (let i = poemsArray.length - 1; i > 0; i--) {
+    for (let i = poemsData.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i)
-      const temp = poemsArray[i]
-      poemsArray[i] = poemsArray[j]
-      poemsArray[j] = temp
+      const temp = poemsData[i]
+      poemsData[i] = poemsData[j]
+      poemsData[j] = temp
     }
 
     // 3 poems per game
-    const gamePoems = poemsArray.slice(0, 3)
+    const gamePoems = poemsData.slice(0, 3)
     return gamePoems;
   }
 
   // initialize unread poems, current poem, clue bank, and score
-  const [unreadPoems, setUnreadPoems] = useState(shufflePoems);
-  const [currentPoem, setCurrentPoem] = useState(unreadPoems[0]);
+  const [unreadPoems, setUnreadPoems] = useState([]);
+  const [currentPoem, setCurrentPoem] = useState(null);
   const [clueBank, setClueBank] = useState(6);
   const [score, setScore] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
 
   const replay = () => {
-    setUnreadPoems(shufflePoems);
+    setUnreadPoems(loadGamePoems);
     setCurrentPoem(unreadPoems[0]);
     setClueBank(6);
     setScore(0);
@@ -84,7 +101,7 @@ const App = () => {
         ) : (
           <div>
             {/* SHOW PAGE TO START GAME */}
-            <StartPage startGame={startGame}/>
+            <StartPage buttonDisabled={poemsData.length === 0} startGame={startGame}/>
           </div> )}
         {/* FOOTER */}
         <div class="footer">
