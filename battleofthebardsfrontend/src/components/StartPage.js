@@ -21,6 +21,7 @@ const StartPage = ({startGame, buttonDisabled}) => {
           <p>Trusty guides, but only 6 can be used.</p>
           <p>Points you receive for questions correct;</p>
           <p>Your honor and wit here you must protect!</p>
+          <p>Click the button at right to begin...</p>
           <p>May the Bard with the highest score win.</p>
         </div>
       </div>
