@@ -11,7 +11,7 @@ const Question = ({ question, onSuccess }) => {
 
   const checkAnswer = (answer) => {
     const user_answer = answer.toLowerCase();
-    const answered_correct_results = question.answer.filter(entry => entry.toLowerCase() === user_answer);
+    const answered_correct_results = question.answers.filter(entry => entry.toLowerCase() === user_answer);
 
     if (answered_correct_results.length > 0) {
       setShowToast(true);
