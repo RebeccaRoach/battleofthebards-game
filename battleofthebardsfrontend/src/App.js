@@ -9,12 +9,10 @@ export const GameContext = React.createContext();
 
 const App = () => {
 
+  // new game initial state:
   const [poemsData, setPoemsData] = useState([]);
-  const [nextAvailablePoem, setNextAvailablePoem] = useState(0);
-
-  // initialize unread poems, current poem, clue bank, and score
   const [unreadPoems, setUnreadPoems] = useState([]);
-  // const [currentPoem, setCurrentPoem] = useState(null);
+  const [nextAvailablePoem, setNextAvailablePoem] = useState(0);
   const [clueBank, setClueBank] = useState(6);
   const [score, setScore] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
@@ -36,33 +34,29 @@ const App = () => {
         setPoemsData(poemsData);
         const batch = selectPoemBatch(poemsData);
         setUnreadPoems(batch);
-        // setCurrentPoem(result[0]);
       })
       .catch(() => {
         alert("Failed to fetch the poems");
       })
   }, [])
 
-  // use Batch where relevant elsewhere in game
-  // fn F2 to change function name globally
   const selectPoemBatch = (poemsData) => {
-    // TODO:: error handling to check if any left, alert if not **
-    console.log("POEM DATA::::", poemsData);
-
     // 3 poems per game
     const gamePoems = poemsData.slice(nextAvailablePoem, nextAvailablePoem + 3);
     setNextAvailablePoem(nextAvailablePoem + 3);
     return gamePoems;
   }
 
-  console.log("INSIDE RENDER CYCLE OF APP.JS");
-  console.log(unreadPoems);
-
   const replay = () => {
     // two steps to ensure proper data being operated on in setter
     const batch = selectPoemBatch(poemsData);
+
+    if (batch.length < 3) {
+      alert("You played all the poems! Check back to play again later.");
+      return;
+    }
+
     setUnreadPoems(batch);
-    // can't see it inside replay because updates on RE render
     setClueBank(6);
     setScore(0);
     setGameStarted(true);
@@ -72,22 +66,12 @@ const App = () => {
     setGameStarted(true);
   }
 
-  // const reset = () => {
-  //   setGameStarted(false);
-  //   setUnreadPoems(shufflePoems);
-  //   setCurrentPoem(unreadPoems[0]);
-  //   setClueBank(6);
-  //   setScore(0);
-  // }
-
   return (
     <GameContext.Provider value={{
       unreadPoems,
-      // currentPoem,
       clueBank,
       score,
       setUnreadPoems,
-      // setCurrentPoem,
       setClueBank,
       setScore
     }}>
