@@ -18,9 +18,9 @@ const App = () => {
   const [gameStarted, setGameStarted] = useState(false);
 
   useEffect(() => {
-    // const API_BASE_URL = "http://localhost:8000/game/poems";
-    // had to add / at the end to get around redirect (defaultRouter in Django REST adds trailing_slash)
-    axios.get('http://localhost:8000/game/poems/')
+    const API_BASE_URL = "https://poetry-game-api.herokuapp.com";
+    // added '/' at the end of url to get around redirect (defaultRouter in Django REST adds trailing_slash)
+    axios.get(`${API_BASE_URL}/game/poems/`)
       .then((response) => {
         let poemsData = response.data;
         // Shuffle thanks to: https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
@@ -52,7 +52,7 @@ const App = () => {
     const batch = selectPoemBatch(poemsData);
 
     if (batch.length < 3) {
-      alert("You played all the poems! Check back to play again later.");
+      alert("There are no more poems. Please check back to play again later.");
       return;
     }
 

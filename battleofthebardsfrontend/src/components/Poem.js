@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import {GameContext} from '../App';
+import { GameContext } from '../App';
 
 const Poem = () => {
 

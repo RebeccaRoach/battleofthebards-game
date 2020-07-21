@@ -11,10 +11,10 @@ const PoemFrame = () => {
   const [showToast, setShowToast] = useState(false);
   const [correctText, setCorrectText] = useState(false);
   const [displayedPoemQuestion, setDisplayedPoemQuestion] = useState(false);
-  // for current poem's clues
-  const [displayClues, setDisplayClues] = useState(0);
   const game = useContext(GameContext);
   let currentPoem = game.unreadPoems[0];
+  // for current poem's clues
+  const [displayClues, setDisplayClues] = useState(0);
 
   const getQuestion = () => {
     setDisplayedPoemQuestion(true);
