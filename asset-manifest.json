@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/battleofthebards-game/static/css/main.5531e900.chunk.css",
+    "main.js": "/battleofthebards-game/static/js/main.4cadd75b.chunk.js",
+    "main.js.map": "/battleofthebards-game/static/js/main.4cadd75b.chunk.js.map",
+    "runtime-main.js": "/battleofthebards-game/static/js/runtime-main.fa608055.js",
+    "runtime-main.js.map": "/battleofthebards-game/static/js/runtime-main.fa608055.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/battleofthebards-game/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.6f51a01f.chunk.js": "/battleofthebards-game/static/js/2.6f51a01f.chunk.js",
+    "static/js/2.6f51a01f.chunk.js.map": "/battleofthebards-game/static/js/2.6f51a01f.chunk.js.map",
+    "index.html": "/battleofthebards-game/index.html",
+    "precache-manifest.ef1860fe0e4665da97d1a8b7a1a6ff67.js": "/battleofthebards-game/precache-manifest.ef1860fe0e4665da97d1a8b7a1a6ff67.js",
+    "service-worker.js": "/battleofthebards-game/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/battleofthebards-game/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.5531e900.chunk.css.map": "/battleofthebards-game/static/css/main.5531e900.chunk.css.map",
+    "static/js/2.6f51a01f.chunk.js.LICENSE.txt": "/battleofthebards-game/static/js/2.6f51a01f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa608055.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.6f51a01f.chunk.js",
+    "static/css/main.5531e900.chunk.css",
+    "static/js/main.4cadd75b.chunk.js"
+  ]
+}
